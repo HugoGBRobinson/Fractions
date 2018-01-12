@@ -6,37 +6,43 @@ namespace Fractions
     {
         public Fraction(int int1, int int2)
         {
-            int Numerator = int1;
-            int Denominator = int2;
+             Numerator = int1;
+             Denominator = int2;
 
             
         }
 
-        public int int1 { get; set; }
-        public int int2 { get; set; }
+        public int Numerator { get; set; }
+        public int Denominator  { get; set; }
         
 
 
-        public double plus(Fraction a, Fraction b)
+        public Fraction plus(Fraction b)
         {
-            double fraction1 = a.int1 / a.int2;
-            double fraction2 = b.int1 / b.int2;
-            var total = fraction1 + fraction2;
+            double NewNumerator = Numerator + b.Numerator;
+            double NewDenominator = Denominator + b.Denominator;
+            Fraction total = new Fraction(Convert.ToInt32(NewNumerator), Convert.ToInt32(NewDenominator));
             return total;
         }
-        public double minus(Fraction b)
+        public Fraction minus(Fraction b)
         {
-            var total = b.int1 - b.int2;
+            double NewNumerator = Numerator - b.Numerator;
+            double NewDenominator = Denominator - b.Denominator;
+            Fraction total = new Fraction(Convert.ToInt32(NewNumerator), Convert.ToInt32(NewDenominator));
             return total;
         }
-        public double multiplyBy(Fraction b)
+        public Fraction multiplyBy(Fraction b)
         {
-            var total = b.int1 * b.int2;
+            double NewNumerator = Numerator * b.Numerator;
+            double NewDenominator = Denominator * b.Denominator;
+            Fraction total = new Fraction (Convert.ToInt32(NewNumerator) , Convert.ToInt32(NewDenominator));
             return total;
         }
-        public double divideBy(Fraction b)
+        public Fraction divideBy(Fraction b)
         {
-            var total = b.int1 / b.int2;
+            double NewNumerator = Numerator / b.Numerator;
+            double NewDenominator = Denominator / b.Denominator;
+            Fraction total = new Fraction(Convert.ToInt32(NewNumerator), Convert.ToInt32(NewDenominator));
             return total;
         }
 

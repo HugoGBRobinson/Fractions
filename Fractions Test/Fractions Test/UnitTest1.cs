@@ -12,7 +12,7 @@ namespace Fractions_Test
         {
             var a = new Fraction(2, 3); // 2/3
             var b = new Fraction(1, 4); // 1/4
-            Assert.AreEqual("11/12", a.plus(a,b).ToString());
+            Assert.AreEqual("11/12", a.plus(b).ToString());
         }
 
         [TestMethod]
